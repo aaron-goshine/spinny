@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="UTF-8">
+    <title>The Ultimate Spin</title> 
+    <style> 
+      .canvas-wrapper {
+        border: 1px solid gray;
+        width: 800px;
+        margin: 50px auto;
+      }
+    </style>
+
+  </head>
+  <body>
+    <div class="canvas-wrapper">
+      <canvas id="canvas" width="800" height="600"></canvas>
+    </div>
+    <script  type="text/javascript">
+      var myCanvas = document.getElementById('canvas');
+      var ctx = myCanvas.getContext('2d');
+
+      ctx.fillStyle = 'green';
+      var m = 10;
+      var h = 100;
+      var w = 160; 
+      var lm = 300;
+      
+      for(var i = 1; i < 6; i++) {
+        ctx.rotate((2 / 180) * Math.PI);
+        ctx.fillRect(lm, ((i - 1) * (m + h)), w, h);
+      }
+
+    </script>
+  </body>
+</html>
+
